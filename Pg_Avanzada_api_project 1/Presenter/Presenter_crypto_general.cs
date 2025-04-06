@@ -41,9 +41,9 @@ namespace Pg_Avanzada_api_project_1.Presenter
                 {
                     ID = c.id,
                     Símbolo = c.symbol?.ToUpper() ?? "N/A",
-                    Precio = c.priceUsd
+                    Precio = c.current_price
                 }).ToList();
-
+                // aqui decimos que el metodo se iria a la view con la variable datos filtrados
                 _view.MostrarDatos(datosFiltrados);
             }
             catch (Exception ex)
